@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Расписание занятий университета</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="pageTitle">Расписание занятий</h1>
+    <div id="groupDetails"></div>
+    <div class="controls">
+      <select id="groupDropdown" class="form-control">
+        <option value="" disabled selected>Выбрать группу</option>
+      </select>
+      <select id="weekDropdown" class="form-control">
+        <option value="" disabled selected>Выбрать неделю</option>
+      </select>
+    </div>
+    <div class="navigation">
+      <button id="prevBtn" class="form-control nav-btn">Предыдущая неделя</button>
+      <div id="currentWeek" class="current-week">Выберите неделю</div>
+      <button id="nextBtn" class="form-control nav-btn">Следующая неделя</button>
+    </div>
+    <div class="legend">
+      <span class="legend-item"><span class="color-indicator green"></span> - Лекция</span>
+      <span class="legend-item"><span class="color-indicator pink"></span> - Лабораторная</span>
+      <span class="legend-item"><span class="color-indicator blue"></span> - Практика</span>
+      <span class="legend-item"><span class="color-indicator dark-blue"></span> - Экзамен</span>
+      <span class="legend-item"><span class="color-indicator turquoise"></span> - Консультация</span>
+      <span class="legend-item"><span class="color-indicator orange"></span> - Другое</span>
+    </div>
+    <table id="scheduleTable" class="schedule-table">
+      <thead>
+        <tr></tr>
+      </thead>
+      <tbody id="scheduleContent"></tbody>
+    </table>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="service.js"></script>
+</body>
+</html>
