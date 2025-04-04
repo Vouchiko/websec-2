@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Расписание преподавателя</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="teacherTitle">Расписание преподавателя</h1>
+    <div class="controls">
+      <select id="weekSelector" class="form-control">
+        <option value="" disabled selected>Выберите неделю</option>
+      </select>
+    </div>
+    <div class="navigation">
+      <button id="prevWeekBtn" class="form-control nav-btn">&lt; Предыдущая неделя</button>
+      <div id="currentTeacherWeek" class="current-week"></div>
+      <button id="nextWeekBtn" class="form-control nav-btn">Следующая неделя &gt;</button>
+    </div>
+    <div id="teacherScheduleContent"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="teacher.js"></script>
+</body>
+</html>
